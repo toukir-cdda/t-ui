@@ -1,0 +1,86 @@
+.wrapper {
+  background: gray;
+  display: flex;
+}
+
+/* 
+****
+*****
+sidebar start here
+*****
+****
+*/
+.sidebar__wrapper {
+  background: var(--primary-bg-color-dark);
+  height: 100vh;
+  position: relative;
+  width: 0;
+  transition: width 0.5s;
+}
+
+/*
+****
+*****
+sidebar toggle on off 
+*****
+****
+*/
+.sidebar__wrapper.open {
+  width: 16.75rem;
+}
+.sidebar__wrapper.close {
+  width: 0;
+}
+
+/* sidebar end here  */
+
+/*
+****
+*****
+main wrapper start here  
+*****
+****
+*/
+.main__section__wrapper {
+  background: lightblue;
+  flex: 1;
+  position: relative;
+  transition:
+    margin-left 0.5s,
+    width 0.5s;
+}
+/*
+****
+*****
+sidebar toggle button 
+*****
+****
+*/
+.sidebar__toggle {
+  position: absolute;
+  top: 50%;
+  left: 0rem;
+  z-index: 1000;
+  transform: translateY(-50%);
+  background: var(--primary-bg-color-dark);
+  opacity: 0.7;
+  padding: 1rem 0.1rem;
+  border-radius: 0.2rem;
+  cursor: pointer;
+}
+
+/*
+****
+*****
+main container start here 
+*****
+****
+*/
+.main__container {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* main container end here  */
+
+/* main wrapper end here  */

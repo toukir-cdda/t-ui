@@ -1,0 +1,15 @@
+.option_group {
+  background: var(--gray);
+  padding: 0.2rem;
+  border: 1px solid var(--graytext);
+  border-radius: 0.3rem;
+}
+
+.group_title {
+  display: flex;
+  flex-direction: column;
+  gap: 0.2rem;
+  color: var(--primary-disable-text);
+  padding: 0.2rem 0.3rem;
+  background: #000;
+}

@@ -1,0 +1,210 @@
+/*
+****
+*****
+action bar wrapper start here  
+*****
+****
+*/
+.action__bar__wrapper {
+  background: var(--primary-bg-color-dark);
+  width: 30.6rem;
+  height: calc(100vh - 4rem);
+  padding: 0.75rem;
+  overflow: hidden;
+  overflow-y: auto;
+}
+.action__bar__wrapper::-webkit-scrollbar {
+  display: none;
+}
+.action__bar__title {
+  color: var(--primary-text-color-dark);
+  font-size: 1.125rem;
+  font-weight: 500;
+  line-height: normal;
+  background: var(--primary-bg-color-dark);
+  padding: 0.25rem 1rem;
+}
+.action__container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.3rem;
+}
+.action__title {
+  color: var(--primary-text-color-dark);
+  font-size: 0.875rem;
+  font-weight: 600;
+  line-height: normal;
+  text-transform: uppercase;
+}
+.action__form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+  background: var(--gray);
+  padding: 0.875rem;
+
+  border-radius: 0.2rem;
+}
+.action__form hr {
+  border: none; /* Remove the default border */
+  border-top: 1px solid var(--lightGray);
+}
+.action__form__group {
+  color: var(--gray);
+  font-size: 0.875rem;
+  font-weight: 400;
+  display: flex;
+  gap: 1rem;
+  justify-content: space-between;
+  align-items: center;
+  align-self: stretch;
+}
+.action__form__group label {
+  color: var(--primary-text-color-dark);
+  font-size: 0.75rem;
+  font-weight: 500;
+  display: flex;
+  gap: 0.3rem;
+  align-items: center;
+}
+.action__form__input {
+  background: var(--lightGray);
+  border: none;
+  color: var(--primary-text-color-dark);
+  outline: none;
+  font-size: 0.875rem;
+  font-weight: 400;
+  padding: 0.625rem 1rem;
+  border-radius: 0.2rem;
+  width: 12.625rem;
+}
+.action__form__input::placeholder {
+  color: var(--graytext);
+  font-size: 0.875rem;
+  font-weight: 400;
+}
+.action__form__group textarea {
+  background: var(--lightGray);
+  border: none;
+  color: var(--primary-text-color-dark);
+  outline: none;
+  font-size: 0.875rem;
+  font-weight: 400;
+  padding: 0.625rem 1rem;
+  border-radius: 0.2rem;
+  resize: vertical;
+  width: 12.625rem;
+}
+.action__form__group textarea::placeholder {
+  color: var(--graytext);
+  font-size: 0.875rem;
+  font-weight: 400;
+}
+.input__color__picker__container {
+  display: flex;
+  gap: 1rem;
+  justify-content: space-between;
+  align-items: center;
+  align-self: stretch;
+  background: var(--lightGray);
+  border: none;
+  color: var(--primary-text-color-dark);
+  outline: none;
+  font-size: 0.875rem;
+  font-weight: 400;
+  padding: 0.3rem 0.3rem;
+  border-radius: 0.2rem;
+  width: 12.625rem;
+}
+.input__color__picker__group {
+  display: flex;
+  gap: 0.2rem;
+  justify-content: center;
+  align-items: center;
+}
+.input__color__picker {
+  background: transparent;
+  border: none;
+  height: 1.5rem;
+  width: 1.5rem;
+  border-radius: 0.2rem;
+}
+.input__color__picker__container span {
+  color: var(--primary-text-color-dark);
+  font-size: 0.75rem;
+  font-weight: 400;
+}
+.action__form__select {
+  background: var(--lightGray);
+  border: none;
+  color: var(--primary-text-color-dark);
+  outline: none;
+  font-size: 0.875rem;
+  font-weight: 400;
+  padding: 0.525rem 0.25rem;
+  border-radius: 0.2rem;
+  width: 12.625rem;
+}
+
+/*
+  ****
+  *****
+  toggle switch start here   
+  *****
+  ****
+  */
+.switch {
+  position: relative;
+  display: inline-block;
+  width: 40px;
+  height: 20px;
+}
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 13px;
+  width: 13px;
+  left: 4px;
+  bottom: 4px;
+  background-color: white;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+}
+input:checked + .slider {
+  background-color: #2196f3;
+}
+input:focus + .slider {
+  box-shadow: 0 0 1px #2196f3;
+}
+input:checked + .slider:before {
+  -webkit-transform: translateX(19px);
+  -ms-transform: translateX(19px);
+  transform: translateX(19px);
+}
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+.slider.round:before {
+  border-radius: 50%;
+}
+/* toggle switch end here   */
+
+/* action bar wrapper end here  */

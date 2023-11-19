@@ -1,0 +1,41 @@
+.sidebar__header {
+  height: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: var(--primary-text-color-dark);
+  font-size: 1.25rem;
+  padding: 0 1rem;
+  border-bottom: 1px solid #333333;
+}
+.sidebar__header span {
+  cursor: pointer;
+}
+.sidebar__container {
+  height: calc(100vh - 6.6rem);
+  overflow: hidden;
+  overflow-y: auto;
+  position: relative;
+  transition: width 0.5s;
+  padding: 0.3rem 1rem;
+}
+.sidebar__container::-webkit-scrollbar {
+  display: none;
+}
+.sidebar__footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 1rem;
+}
+/* sidebar end here  */
+.sidebar__content {
+  transition: transform 0.3s ease-in-out;
+  transform: translateX(0%);
+}
+/* .showList {
+  transition: translateX(100%);
+}
+.showGrid {
+  transform: translateX(-100%);
+} */

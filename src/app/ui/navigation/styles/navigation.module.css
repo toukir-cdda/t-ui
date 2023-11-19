@@ -1,0 +1,49 @@
+/*
+****
+*****
+navbar start here  
+*****
+****
+*/
+.nav__wrapper {
+  background: var(--primary-bg-color-dark);
+  height: 4rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 1.25rem;
+  border-bottom: 1px solid #333333;
+}
+.nav__left {
+  color: var(--primary-text-color-dark);
+  font-size: 1.5rem;
+  font-weight: 600;
+  line-height: normal;
+}
+.nav__right {
+  display: flex;
+  align-items: center;
+  gap: 1.8rem;
+}
+.nav__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--lightGray);
+  width: 2.2rem;
+  height: 2.2rem;
+  border-radius: 100%;
+  opacity: 0.6;
+}
+.nav__icon:hover {
+  opacity: 1;
+  cursor: pointer;
+}
+.profile__img {
+  background: gray;
+  width: 2.2rem;
+  height: 2.2rem;
+  border-radius: 100%;
+  /* object-fit: cover; */
+}
+/* navbar end here  */

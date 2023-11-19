@@ -1,0 +1,34 @@
+.dropdown_header {
+  width: 100%;
+  background: var(--lightGray);
+  border-radius: 0.2rem;
+  user-select: none;
+  padding: 0.4rem;
+  color: var(--primary-text-color-dark);
+  cursor: pointer;
+  transition: background-color 0.3s;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  align-self: stretch;
+  gap: 0.5rem;
+  overflow: hidden;
+}
+
+.header_option {
+  display: flex;
+  flex-direction: row;
+  gap: 0.2rem;
+  width: 100%;
+}
+
+.option__label {
+  width: 100%;
+}
+.icon {
+  display: flex;
+  align-items: center;
+  height: 1.3rem;
+  width: 1.3rem;
+}

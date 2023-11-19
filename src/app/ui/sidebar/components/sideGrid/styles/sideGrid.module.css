@@ -1,0 +1,43 @@
+.side_grid_wrapper {
+}
+
+.grid_category {
+  color: var(--primary-text-color-dark);
+  font-size: 0.75rem;
+  font-weight: 400;
+  line-height: 1rem;
+  margin: 0.5rem 0;
+}
+
+.grid_container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 0.5rem;
+  width: 100%;
+}
+
+.grid_item {
+  background: var(--gray);
+  display: flex;
+  height: 3.75rem;
+  padding: 0.5rem;
+  border-radius: 0.25rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.3rem;
+}
+
+.grid_item:hover {
+  background: var(--lightGray);
+  cursor: pointer;
+}
+
+.grid_item span {
+  color: var(--primary-text-color-dark);
+  font-size: 0.75rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1rem;
+}

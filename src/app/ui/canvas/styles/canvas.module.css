@@ -1,0 +1,57 @@
+/*
+****
+*****
+canvas wrapper start here  
+*****
+****
+*/
+.canvas__wrapper {
+  background: var(--gray);
+  color: var(--lightGray);
+  width: 100%;
+  position: relative;
+  z-index: 5;
+}
+
+.quick__action__container {
+  position: absolute;
+  top: 1.25rem;
+  left: 50%;
+  transform: translateX(-50%); /* Center the container by moving it back by half of its width */
+  width: 80%;
+  height: 3rem;
+  background: var(--lightGray);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+  padding: 0 1rem;
+  border-radius: 0.4rem;
+}
+.quick__btn__container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.3rem;
+}
+
+.quick__btn__container button {
+  background: rgb(133, 133, 133);
+  border: none;
+  outline: none;
+  color: var(--primary-text-color-dark);
+  font-size: 0.875rem;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+  padding: 0.5rem 0.5rem;
+  border-radius: 0.2rem;
+  opacity: 0.7;
+}
+.quick__btn__container button:hover {
+  opacity: 1;
+}
+
+/* canvas wrapper end here  */
