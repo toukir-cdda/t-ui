@@ -3,24 +3,24 @@ import type { ComponentProps, FC } from "react";
 // import { twMerge } from 'tailwind-merge'
 // import { DeepPartial } from '../../helpers/deep-partial'
 // import { mergeDeep } from '../../helpers/mergeDeep'
-// import { KeepBoolean, KeepHeadingLevel } from '../../Keep/KeepTheme'
-// import { useTheme } from '../../Keep/ThemeContext'
+// import { Boolean, HeadingLevel } from '../..//Theme'
+// import { useTheme } from '../..//ThemeContext'
 import { useAccordionContext } from "./AccordionPanelContext";
-import { KeepBoolean, KeepHeadingLevel } from "@/themeProvider/KeepTheme";
+import { Boolean, HeadingLevel } from "@/themeProvider/ThemeTypes";
 import { DeepPartial } from "@/helpers/deep-partial";
 import { useTheme } from "@/themeProvider/ThemeContext";
 import { mergeDeep } from "@/helpers/mergeDeep";
 import { mergeClassNames } from "@/helpers/mergeClassNames";
 
-export interface keepAccordionTitleTheme {
+export interface AccordionTitleTheme {
   arrow: {
     base: string;
-    open: KeepBoolean;
+    open: Boolean;
   };
   base: string;
-  flush: KeepBoolean;
+  flush: Boolean;
   heading: string;
-  open: KeepBoolean;
+  open: Boolean;
   disabled: string;
   iconPosition: {
     left: string;
@@ -30,8 +30,8 @@ export interface keepAccordionTitleTheme {
 
 export interface AccordionTitleProps extends ComponentProps<"button"> {
   arrowIcon?: FC<ComponentProps<"svg">>;
-  as?: KeepHeadingLevel;
-  theme?: DeepPartial<keepAccordionTitleTheme>;
+  as?: HeadingLevel;
+  theme?: DeepPartial<AccordionTitleTheme>;
 }
 
 export const AccordionTitle: FC<AccordionTitleProps> = ({
@@ -86,7 +86,7 @@ export const AccordionTitle: FC<AccordionTitleProps> = ({
         !OpenIcon &&
         showIcon &&
         "-"}
-      <Heading className={theme.heading} data-testid="keep-accordion-heading">
+      <Heading className={theme.heading} data-testid="-accordion-heading">
         {children}
       </Heading>
       {iconPosition === "right" && !isOpen && CloseIcon && CloseIcon}

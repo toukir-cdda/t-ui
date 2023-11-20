@@ -1,5 +1,6 @@
-import React from 'react';
-import styles from './styles/sideList.module.css';
+import React from "react";
+import styles from "./styles/sideList.module.css";
+import { Accordion } from "@/app/ui/Accordion";
 
 const SideList = () => {
   return (
@@ -286,6 +287,27 @@ const SideList = () => {
         </div>
       </div>
 
+      <Accordion collapseAll>
+        <Accordion.Panel>
+          <Accordion.Title
+            theme={{
+              base: "text-red-500 bg-green-700 w-full flex px-3",
+              flush: {
+                on: "",
+                off: "bg-red-500 text-white",
+              },
+              open: {
+                on: "bg-red-500",
+                off: "bg-red-500",
+              },
+            }}
+          >
+            test
+          </Accordion.Title>
+          <Accordion.Content>this is content</Accordion.Content>
+        </Accordion.Panel>
+      </Accordion>
+
       {/* open acordion */}
       <div className={styles.active__sidebar__list__wrapper}>
         <div className={styles.sidbar__list__left_content}>
@@ -609,7 +631,12 @@ const SideList = () => {
           </g>
           <defs>
             <clipPath id="clip0_1582_4775">
-              <rect width="12" height="12" fill="white" transform="translate(12 12) rotate(-180)" />
+              <rect
+                width="12"
+                height="12"
+                fill="white"
+                transform="translate(12 12) rotate(-180)"
+              />
             </clipPath>
           </defs>
         </svg>
@@ -661,7 +688,12 @@ const SideList = () => {
           </g>
           <defs>
             <clipPath id="clip0_1582_4775">
-              <rect width="12" height="12" fill="white" transform="translate(12 12) rotate(-180)" />
+              <rect
+                width="12"
+                height="12"
+                fill="white"
+                transform="translate(12 12) rotate(-180)"
+              />
             </clipPath>
           </defs>
         </svg>
@@ -713,7 +745,12 @@ const SideList = () => {
           </g>
           <defs>
             <clipPath id="clip0_1582_4775">
-              <rect width="12" height="12" fill="white" transform="translate(12 12) rotate(-180)" />
+              <rect
+                width="12"
+                height="12"
+                fill="white"
+                transform="translate(12 12) rotate(-180)"
+              />
             </clipPath>
           </defs>
         </svg>
@@ -765,7 +802,12 @@ const SideList = () => {
           </g>
           <defs>
             <clipPath id="clip0_1582_4775">
-              <rect width="12" height="12" fill="white" transform="translate(12 12) rotate(-180)" />
+              <rect
+                width="12"
+                height="12"
+                fill="white"
+                transform="translate(12 12) rotate(-180)"
+              />
             </clipPath>
           </defs>
         </svg>
@@ -1094,7 +1136,12 @@ const SideList = () => {
           </g>
           <defs>
             <clipPath id="clip0_1582_4775">
-              <rect width="12" height="12" fill="white" transform="translate(12 12) rotate(-180)" />
+              <rect
+                width="12"
+                height="12"
+                fill="white"
+                transform="translate(12 12) rotate(-180)"
+              />
             </clipPath>
           </defs>
         </svg>
@@ -1146,7 +1193,12 @@ const SideList = () => {
           </g>
           <defs>
             <clipPath id="clip0_1582_4775">
-              <rect width="12" height="12" fill="white" transform="translate(12 12) rotate(-180)" />
+              <rect
+                width="12"
+                height="12"
+                fill="white"
+                transform="translate(12 12) rotate(-180)"
+              />
             </clipPath>
           </defs>
         </svg>
@@ -1198,7 +1250,12 @@ const SideList = () => {
           </g>
           <defs>
             <clipPath id="clip0_1582_4775">
-              <rect width="12" height="12" fill="white" transform="translate(12 12) rotate(-180)" />
+              <rect
+                width="12"
+                height="12"
+                fill="white"
+                transform="translate(12 12) rotate(-180)"
+              />
             </clipPath>
           </defs>
         </svg>
@@ -1250,7 +1307,12 @@ const SideList = () => {
           </g>
           <defs>
             <clipPath id="clip0_1582_4775">
-              <rect width="12" height="12" fill="white" transform="translate(12 12) rotate(-180)" />
+              <rect
+                width="12"
+                height="12"
+                fill="white"
+                transform="translate(12 12) rotate(-180)"
+              />
             </clipPath>
           </defs>
         </svg>

@@ -366,12 +366,6 @@ const Canvas = () => {
           </Accordion.Content>
         </Accordion.Panel>
       </Accordion>
-      {/* <Accordion>
-        <Accordion.Panel>
-          <Accordion.Title>test</Accordion.Title>
-          <Accordion.Content>this is content</Accordion.Content>
-        </Accordion.Panel>
-      </Accordion> */}
     </div>
   );
 };

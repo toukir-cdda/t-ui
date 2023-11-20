@@ -6,13 +6,13 @@ import { mergeDeep } from "@/helpers/mergeDeep";
 import Collapse from "@/app/lib/Collapse";
 import { mergeClassNames } from "@/helpers/mergeClassNames";
 
-export interface keepAccordionComponentTheme {
+export interface AccordionComponentTheme {
   base: string;
 }
 
 export interface AccordionContentProps
   extends PropsWithChildren<ComponentProps<"div">> {
-  theme?: DeepPartial<keepAccordionComponentTheme>;
+  theme?: DeepPartial<AccordionComponentTheme>;
 }
 
 export const AccordionContent: FC<AccordionContentProps> = ({
@@ -29,7 +29,7 @@ export const AccordionContent: FC<AccordionContentProps> = ({
     <Collapse isOpened={isOpen}>
       <div
         className={mergeClassNames(theme.base, className)}
-        data-testid="keep-accordion-content"
+        data-testid="accordion-content"
         hidden={!isOpen}
         {...props}
       >

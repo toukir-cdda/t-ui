@@ -11,21 +11,18 @@ import React, {
   useMemo,
   useState,
 } from "react";
-import {
-  AccordionContent,
-  keepAccordionComponentTheme,
-} from "./AccordionContent";
-import { AccordionTitle, keepAccordionTitleTheme } from "./AccordionTitle";
+import { AccordionContent, AccordionComponentTheme } from "./AccordionContent";
+import { AccordionTitle, AccordionTitleTheme } from "./AccordionTitle";
 import { mergeClassNames } from "@/helpers/mergeClassNames";
 import { AccordionPanel, AccordionPanelProps } from "./AccordionPanel";
 
-export interface keepAccordionTheme {
-  root: keepAccordionRootTheme;
-  content: keepAccordionComponentTheme;
-  title: keepAccordionTitleTheme;
+export interface AccordionTheme {
+  root: AccordionRootTheme;
+  content: AccordionComponentTheme;
+  title: AccordionTitleTheme;
 }
 
-export interface keepAccordionRootTheme {
+export interface AccordionRootTheme {
   base: string;
   flush: any;
 }
