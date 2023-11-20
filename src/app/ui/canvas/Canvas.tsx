@@ -1,8 +1,13 @@
 import React from "react";
 import styles from "./styles/canvas.module.css";
+import { Accordion } from "../Accordion";
+import { useThemeMode } from "@/themeProvider/ThemeContext";
 // import { MyAutoComplete } from "react-custom-google-map";
 
 const Canvas = () => {
+  let usePreferences = true;
+  const [mode, setMode, toggleMode] = useThemeMode(usePreferences);
+  console.log(mode);
   return (
     <div className={styles.canvas__wrapper}>
       {/* quick action bar */}
@@ -322,6 +327,51 @@ const Canvas = () => {
           <i className="fa fa-envelope"></i>{' '}
         </a>
       </nav> */}
+
+      <Accordion
+        // className="bg-blue-800"
+        // flush
+        iconPosition="right"
+        // disabled
+        alwaysOpen={false}
+        collapseAll
+        theme={
+          {
+            // base: "bg-blue-800",
+          }
+        }
+      >
+        <Accordion.Panel>
+          <Accordion.Title
+            className="text-red-500 bg-green-700"
+            // theme={{
+            //   base: "flex w-full items-center text-left font-semibold text-sm leading-[22px] tracking-[-0.2px] text-black/100 hover:text-black",
+            // }}
+          >
+            Getting Started
+          </Accordion.Title>
+
+          <Accordion.Content
+          // theme={{
+          //   base: "text-slate-500 font-normal",
+          // }}
+          >
+            <ul className="">
+              <li>test 1</li>
+              <li>test 2</li>
+              <li>test 3</li>
+              <li>test 4</li>
+              <li>test 5</li>
+            </ul>
+          </Accordion.Content>
+        </Accordion.Panel>
+      </Accordion>
+      {/* <Accordion>
+        <Accordion.Panel>
+          <Accordion.Title>test</Accordion.Title>
+          <Accordion.Content>this is content</Accordion.Content>
+        </Accordion.Panel>
+      </Accordion> */}
     </div>
   );
 };

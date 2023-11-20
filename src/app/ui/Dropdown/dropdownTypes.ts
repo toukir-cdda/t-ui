@@ -27,6 +27,7 @@ export interface DropdownProps {
   onSelect?: (selectedOptions: Option[]) => void;
   multiSelect?: boolean;
   styles?: styles;
+  required?: boolean;
 }
 
 // dropdown header types
@@ -44,6 +45,8 @@ export interface DropdownHeaderProps {
   toggleDropdown: () => void;
   selectedOptions: selectedOption[];
   styles?: styles;
+  isError?: boolean;
+  errorMessage?: string;
 }
 
 // dropdown render options types

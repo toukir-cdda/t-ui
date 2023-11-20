@@ -15,6 +15,7 @@
   --primary-placeholder: #6b6b6b;
   --primary-disable-bg: #414141;
   --primary-disable-text: #999999;
+  --error-color: #ff0000;
 }
 
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
@@ -197,3 +198,7 @@ body {
 /*
 ***** action buttons end ******
 */
+
+.base__root {
+  background: rgb(147, 209, 209);
+}

@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from "react";
+import React, { useState, useRef, useEffect, useCallback } from "react";
 import DropdownHeader from "./DropdownHeader";
 import RenderOptions from "./RenderOptions";
 import cssStyles from "./styles/dropdown.module.css";
@@ -14,7 +14,12 @@ const Dropdown: React.FC<DropdownProps> = ({
   onSelect,
   multiSelect = false,
   styles,
+  required = false,
 }) => {
+  const [errors, setErrors] = useState({
+    error: false,
+    errorMessage: "",
+  });
   const [isOpen, setIsOpen] = useState(false);
   const [selectedOptions, setSelectedOptions] = useState<Option[]>([]);
 
@@ -88,6 +93,7 @@ const Dropdown: React.FC<DropdownProps> = ({
     };
   }, []);
 
+  // Handle dropdown position
   useEffect(() => {
     if (dropdownRef.current) {
       const dropdownRect = dropdownRef.current.getBoundingClientRect();
@@ -113,6 +119,28 @@ const Dropdown: React.FC<DropdownProps> = ({
     }
   }, [isOpen]);
 
+  // Handle required validation
+  useEffect(() => {
+    if (required) {
+      if (selectedOptions.length === 0) {
+        setErrors({
+          error: true,
+          errorMessage: "This field is required",
+        });
+      } else {
+        setErrors({
+          error: false,
+          errorMessage: "",
+        });
+      }
+    } else {
+      setErrors({
+        error: false,
+        errorMessage: "",
+      });
+    }
+  }, [selectedOptions, required, isOpen]);
+
   return (
     <div className={cssStyles.custom_dropdown} ref={dropdownRef}>
       {/* dropdown header */}
@@ -120,6 +148,8 @@ const Dropdown: React.FC<DropdownProps> = ({
         toggleDropdown={toggleDropdown}
         selectedOptions={selectedOptions}
         styles={styles}
+        isError={errors.error}
+        errorMessage={errors.errorMessage}
       />
       {/* dropdown lists */}
       {isOpen && (

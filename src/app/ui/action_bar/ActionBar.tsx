@@ -940,18 +940,18 @@ const ActionBar = () => {
             options={options}
             onSelect={handleSelect}
             multiSelect={true}
+            required={true}
             styles={
               {
-                // header: "bg-red-500 ring-4 rounded-md cursor-pointer",
-                // optionContainer: "bg-green-500 rounded-md mt-3",
-                // optionGroup: "bg-indigo-500 rounded-md p-2 mx-2",
+                // header: "bg-blue-900 text-white  rounded-md cursor-pointer p-2 ",
+                // optionContainer: "bg-green-500 rounded-md mt-1 ",
+                // optionGroup: "bg-indigo-500 rounded-md p-2 mx-2 border-2",
                 // groupTitle: "text-white",
                 // option:
                 //   "text-white bg-yellow-500 my-3 p-2 rounded-md hover:bg-red-500  cursor-pointer",
                 // disabledOption:
                 //   "text-gray-400 bg-gray-200 my-3 p-2 rounded-md hover:bg-gray-200 cursor-not-allowed",
-                // selectedOption:
-                //   "bg-green-800 ring-4 py-2 rounded-md cursor-pointer",
+                // selectedOption: "bg-green-800 my-3 p-2 rounded-md cursor-pointer",
               }
             }
           />
